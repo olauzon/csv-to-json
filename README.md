@@ -1,4 +1,4 @@
-`csv-to-json`
+`csv-to-json` [![Build Status](https://travis-ci.org/olauzon/csv-to-json.png?branch=master)](https://travis-ci.org/olauzon/csv-to-json)
 =============
 
 A Clojure utility that converts CSV to JSON.
