@@ -45,11 +45,26 @@ result:
 ```
 
 
+Installation
+------------
+
+### Leiningen
+
+Modify your [Leiningen](http://github.com/technomancy/leiningen) dependencies to
+include `clj-to-json`:
+
+```clj
+
+    :dependencies [[csv-to-json "0.1.2-SNAPSHOT"] ...]
+
+```
+
+
 Contributors
 ------------
 
-  * @olauzon
-  * @gerritjvv
+  * [@olauzon](https://github.com/olauzon)
+  * [@gerritjvv](https://github.com/gerritjvv)
 
 
 License
