@@ -51,7 +51,7 @@ Installation
 ### Leiningen
 
 Modify your [Leiningen](http://github.com/technomancy/leiningen) dependencies to
-include `clj-to-json`:
+include `csv-to-json`:
 
 ```clj
 
