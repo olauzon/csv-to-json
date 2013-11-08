@@ -4,23 +4,34 @@
            [clojure.data.csv  :as csv]
            [clojure.data.json :as json]))
 
-(defn make-num
+(defn ^long make-num
   [input]
   (cond
     (integer? input) input
     (empty?   input) 0
-    (string?  input) (Long. input)
+    (string?  input) (Long/parseLong (clojure.string/trim input))
     :else            0))
 
-(defn make-bool
+(defn ^double make-double
   [input]
-  (boolean (Boolean/valueOf input)))
+  (cond
+    (integer? input) input
+    (empty?   input) 0.0
+    (string?  input) (Double/parseDouble (clojure.string/trim input))
+    :else            0.0))
+
+
+(defn ^boolean make-bool
+  [input]
+  (boolean (Boolean/valueOf (clojure.string/trim input))))
+
 
 (defn type-fn-fn
   [type-key]
   (cond 
-    (= type-key "int")  make-num
-    (= type-key "bool") make-bool
+    (or (= type-key "int") (= type-key "long"))  make-num
+    (or (= type-key "bool") (= type-key "boolean")) make-bool
+    (or (= type-key "float") (= type-key "double")) make-double
     :else str))
 
 (def type-fn
