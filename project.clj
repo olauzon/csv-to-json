@@ -1,4 +1,4 @@
-(defproject csv-to-json "0.1.1-SNAPSHOT"
+(defproject csv-to-json "0.1.2-SNAPSHOT"
   :description "Converts CSV input files to JSON output files"
   :url "https://github.com/olauzon/csv-to-json"
   :license {:name "Eclipse Public License"
@@ -8,6 +8,4 @@
     [org.clojure/data.csv  "0.1.2"]
     [org.clojure/data.json "0.2.3"]
   ]
-  :plugins [[no-man-is-an-island/lein-eclipse "2.0.0"]]
-
   :main csv-to-json.core)

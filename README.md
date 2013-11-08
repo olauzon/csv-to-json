@@ -45,6 +45,13 @@ result:
 ```
 
 
+Contributors
+------------
+
+  * @olauzon
+  * @gerritjvv
+
+
 License
 -------
 

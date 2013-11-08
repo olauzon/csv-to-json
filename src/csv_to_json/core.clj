@@ -20,11 +20,9 @@
     (string?  input) (Double/parseDouble (clojure.string/trim input))
     :else            0.0))
 
-
 (defn ^boolean make-bool
   [input]
   (boolean (Boolean/valueOf (clojure.string/trim input))))
-
 
 (defn type-fn-fn
   [type-key]
